@@ -3,7 +3,7 @@
 	<form action="/secrat/<%= contact._id%>?_method=put" method="post">
 		
 	
-<input type="text" class="display-md-2 display-4 heading  edit"value="<%= contact.subject %>" name="contact[subject]">
+<input type="text" class="display-md-2 display-4 heading  edit col-sm-9 col-md-10" style="word-wrap: break-word" value="<%= contact.subject %>" name="contact[subject]">
 	<hr>
 <textarea class="content p-3" style="width:100%;" name="contact[text]">
 	<%= contact.text %>
