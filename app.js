@@ -9,13 +9,14 @@ var express = require("express"),
 	flash = require("connect-flash"),
     LocalStrategy = require("passport-local");
 
-mongoose.set('useUnifiedTopology', true);
+/*mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
-//mongoose.connect("mongodb://localhost/diary");
+mongoose.connect("mongodb://localhost/diary");*/
+
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology : true});
 client.connect(err => {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
