@@ -11,7 +11,8 @@ var express = require("express"),
 
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
-mongoose.connect("mongodb://localhost/diary");
+//mongoose.connect("mongodb://localhost/diary");
+mongoose.connect("harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodoverride("_method"));
@@ -222,6 +223,6 @@ function isLoggedIn(req, res, next){
 req.flash("success","login to enter");
     res.redirect("/login");
 }
-app.listen(3000,function(){
+app.listen(process.env.PORT||3000,function(){
 	console.log("server stated");
 });
