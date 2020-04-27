@@ -1,0 +1,18 @@
+<%- include("partials/header")%>
+<div class="container show">
+	<form action="/secrat/<%= contact._id%>?_method=put" method="post">
+		
+	
+<input type="text" class="display-2 heading text-center edit"value="<%= contact.subject %>" name="contact[subject]">
+	<hr>
+<textarea class="content p-3" style="width:100%;" name="contact[text]">
+	<%= contact.text %>
+	
+</textarea>	
+	
+	<button type="submit" class="btn btn-primary mb-2">save changes</button>
+	
+	</form>
+	
+</div>
+<%- include("partials/footer")%>

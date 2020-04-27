@@ -1,0 +1,73 @@
+.jumbotron{
+	background: #334d50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow: 10px 8px 10px grey;
+}
+#new{
+	
+	
+background: #B79891;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #94716B, #B79891);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #94716B, #B79891); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow: 10px 8px 10px grey;
+}
+.btn{
+	box-shadow: 10px 8px 10px black;
+}
+.secrat{
+	width:100%;
+	height :10rem;
+	background: #f2709c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+box-shadow: 10px 8px 10px grey;
+
+	padding-top:16%;
+	text-shadow:1px 1px 2px grey;
+	
+
+}
+a:hover{
+	text-decoration: none;
+	
+}
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.heading{
+	text-transform: capitalize;
+}
+.content{
+	
+	height:40rem;
+	border : 10px solid black;
+	overflow-y:scroll;
+	
+	background:white;
+}
+.show{
+	background: #4B79A1;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #283E51, #4B79A1);
+	box-shadow: 10px 8px 10px grey;
+}
+.edit{
+	background: #4B79A1;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #283E51, #4B79A1);
+	border:0px;
+	
+}
+#pos{
+	position:fixed;
+	display:block;
+}
+#pos1{
+	position:fixed;
+	margin-top:5rem;
+	
+	
+}

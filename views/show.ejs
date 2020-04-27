@@ -1,0 +1,27 @@
+<%- include("partials/header")%>
+<div class="row">
+	
+<div class="col-2 col-md-1">
+<a href="/secrat/<%=contact._id %>/edit" class="btn btn-outline-info" id="pos">edit</a>
+<form id="pos1" action="/secrat/<%=contact._id %>?_method=delete" method="post">
+<button type="submit" class="btn btn-outline-info mb-2">delete</button>
+</form>
+</div>
+	<div class="col-10 col-md-11">
+		
+	
+<div class=" container show">
+<div class="display-2 heading text-center"><%= contact.subject %></div>
+	<hr>
+<div class="content p-3">
+	<%= contact.text %>
+	
+</div>	
+	
+	
+	
+	</div>
+	
+</div>
+</div>
+<%- include("partials/footer")%>
