@@ -1,5 +1,6 @@
 var express = require("express"),
 	app = express(),
+	connectDB = require('./DB/collectio.js'),
 	bodyParser = require("body-parser"),
 	Contact  = require("./models/contact.js"),
 	User = require("./models/user.js"),
@@ -14,15 +15,29 @@ mongoose.set('useNewUrlParser', true);
 mongoose.connect("mongodb://localhost/diary");*/
 
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology : true});
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+/*const { MongoClient } = require("mongodb");
+ 
+// Replace the following with your Atlas connection string                                                                                                                                        
 
+const url = "mongodb+srv://harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority";
+
+const client = new MongoClient(url);
+
+async function run() {
+    try {
+        await client.connect();
+        console.log("Connected correctly to server");
+
+    } catch (err) {
+        console.log(err.stack);
+    }
+    finally {
+        await client.close();
+    }
+}
+
+run().catch(console.dir);*/
+connectDB();
 //mongoose.connect("harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
