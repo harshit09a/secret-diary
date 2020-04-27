@@ -12,7 +12,17 @@ var express = require("express"),
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useNewUrlParser', true);
 //mongoose.connect("mongodb://localhost/diary");
-mongoose.connect("harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority");
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+//mongoose.connect("harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodoverride("_method"));
