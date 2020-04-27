@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var URI = "mongodb+srv://harshit09a:97@Harshit@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority"
+var URI = "mongodb+srv://harshit09a:<password>@cluster0-ptuyu.mongodb.net/test?retryWrites=true&w=majority"
 var connectDB = async()=>{
     await mongoose.connect(URI,{
         useNewUrlParser:true,
